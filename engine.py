@@ -132,7 +132,6 @@ class Engine(object):
                 transforms.ToTensor(),
                 normalize,
             ])
-            print(self.state['train_transform'])
 
         if self._state('val_transform') is None:
             normalize = transforms.Normalize(mean=model.image_normalization_mean,
